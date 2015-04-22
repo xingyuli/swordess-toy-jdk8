@@ -23,7 +23,7 @@ public class OptionalTest {
 
     @Test
     public void testIfPresent() {
-        Optional.of("string").ifPresent( (v) -> System.out.println(v.length()) );
+        Optional.of("string").ifPresent(v -> System.out.println(v.length()));
     }
 
     @Test
@@ -61,7 +61,7 @@ public class OptionalTest {
 
     @Test
     public void testFilter() {
-        Optional<Integer> result = Optional.of(5).filter((v) -> v > 10);
+        Optional<Integer> result = Optional.of(5).filter(v -> v > 10);
         assertFalse(result.isPresent());
 
         result = Optional.of(20).filter((v) -> v > 10);
@@ -70,7 +70,7 @@ public class OptionalTest {
 
     @Test
     public void testMap() {
-        Optional<Integer> result = Optional.of(10).map((v) -> v * 2);
+        Optional<Integer> result = Optional.of(10).map(v -> v * 2);
         assertEquals(20, result.get().intValue());
     }
 
