@@ -1,4 +1,4 @@
-package org.swordess.toy.jdk8;
+package org.swordess.toy.jdk8.specific;
 
 import org.junit.Test;
 
